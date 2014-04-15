@@ -1,0 +1,19 @@
+<%= render partial: 'layouts/header', locals: {page: 'parent_category', page_name: @parent_category.name} %>
+<%= render partial: 'layouts/links', locals: {page: 'parent_category', id: @parent_category.slug} %>
+
+        <% @parent_category.categories.each do |c| %>
+        <% if c.items.count>0 %>
+            <div class="row">
+                <div class="col-md-12" >
+                    <h2 class="category-name"><%= c.name %></h2>
+                </div>
+            </div>
+            <% c.items.each_slice(2) do |slice| %>
+            <div class="row">
+                <%= render partial: 'home/item', locals: {i: slice[0], offset: 1, side: 'left'} %>
+                <%= render partial: 'home/item', locals: {i: slice[1], offset: 0, side: 'right'} unless slice[1].nil? %>
+            </div>
+            <% end %>
+        <% end %>
+      <% end %>
+<%= render partial: 'layouts/footer', locals: {page: 'home'} %>

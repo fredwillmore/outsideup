@@ -1,0 +1,22 @@
+<tr>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td colspan="2"></td>
+  <!--old colspan calculation: if($params['page'] == 'home'){ echo "6"; } else if($params['page'] == 'pcat'){ echo "4"; }  else if($params['page'] == 'contact'){ echo "2"; }-->
+  <td colspan="6" class="sm" align="center">
+<%
+	#dsp_nav($params);
+%>
+  <br />&nbsp;<br />
+  All designs copyright &copy;<%= Time.now.year %> OutsideUp<br />
+  site engineered by <a href="http://www.aztronaut.com" onclick="window.open(this.href);">aztronaut</a>
+  </td>
+  <td colspan="2"></td>
+</tr>
+</table>
+<map name="contact">
+  <area href="contact.php" coords="448, 54, 568, 92" alt="Contact/Order">
+</map>
+</body>
+</html>

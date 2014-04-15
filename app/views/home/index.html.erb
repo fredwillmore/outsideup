@@ -1,0 +1,24 @@
+<%= render partial: 'layouts/header', locals: {page: 'home'} %>
+
+    <div id="container">
+        <div class="column-left">
+            <%= link_to raw("<button class=\"button\">#{@parent_categories[0].name}</button>"), "/#{@parent_categories[0].slug}" %>
+            <br>
+            <%= image_tag @parent_categories[0].photo.url(:medium), alt: @parent_categories[0].name %>
+        </div>
+        <div class="column-center">
+          <%= link_to raw("<button class=\"button\">#{@parent_categories[1].name}</button>"), "/#{@parent_categories[1].slug}" %>
+          <br>
+          <%= image_tag @parent_categories[1].photo.url(:medium), alt: @parent_categories[1].name %>
+        </div>
+        <div class="column-right">
+          <%= link_to raw("<button class=\"button\">#{@parent_categories[2].name}</button>"), "/#{@parent_categories[2].slug}" %>
+          <br>
+          <%= image_tag @parent_categories[2].photo.url(:medium), alt: @parent_categories[2].name %>
+        </div>
+        <br>
+        <%= link_to raw("<button class=\"button-contact\">Contact/Order</button>"), "contact" %>
+    </div>
+
+
+<%= render partial: 'layouts/footer', locals: {page: 'home'} %>

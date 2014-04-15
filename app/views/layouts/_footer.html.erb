@@ -1,0 +1,17 @@
+        <div class="row" id="footer">
+            <div class="col-md-12" >
+              <%= render partial: 'layouts/links', locals: {page: 'parent_category', id: @parent_category.slug} %>
+              <br />&nbsp;<br />
+              All designs copyright &copy;<%= Time.now.year %> OutsideUp<br />
+              site engineered by <a href="http://www.aztronaut.com" onclick="window.open(this.href);">aztronaut</a>
+            </div>
+        </div>
+    </div><!-- end container -->
+
+<map name="contact">
+  <area href="/" coords="0, 0, 330, 125" alt="Contact/Order">
+  <area href="/contact" coords="448, 54, 568, 92" alt="Contact/Order">
+</map>
+
+</body>
+</html>

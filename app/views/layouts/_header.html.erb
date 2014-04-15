@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8" >
+  <meta name="DESCRIPTION" content="Indoor and outdoor furniture, planters, decks, platforms and structures">
+  <meta name="KEYWORDS" content="furniture, planters, decks, platforms, structures, recovered materials, recycled">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="Shortcut Icon" href="./favicon.ico">
+  <%
+#  <title>Outside Up - < %= params['pcatname'].empty? ? "Fresh Interactive Design" : params['pcatname'] % ></title>
+  %>
+  <title>Outside Up - Fresh Interactive Design</title>
+</head>
+
+<body>
+<div id="bg-color-left"></div>
+<div id="bg-color-right"></div>
+    <div class="container">
+        <div class="row red">
+            <% if page=='home' %>
+                <div class="col-md-12" >
+                    <%= image_tag "outsideup.gif", alt: "OutsideUp - Fresh Interactive Design" %>
+                </div>
+            <% else %>
+                <div class="col-md-4 column-left" >
+                    <%= link_to( image_tag( "outsideup_sm.png", alt: "OutsideUp - Fresh Interactive Design" ), root_path ) %>
+                </div>
+                <div class="col-md-8" >
+                    <%= link_to raw("<button class=\"button-contact-pc\">Contact/Order</button>"), "/contact" %>
+                    <h1 style="vertical-align:middle; padding:20px; text-align:right; font-size:36px;"><%= page_name %></h1>
+                </div>
+            <% end %>
+        </div>

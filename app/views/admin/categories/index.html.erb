@@ -1,0 +1,36 @@
+<h1>Listing categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Display order</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Parent category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.display_order %></td>
+        <td><%= category.name %></td>
+        <td><%= category.description %></td>
+        <td><%= category.parent_category_id %></td>
+        <td><%= link_to 'Show', admin_category_path(category) %></td>
+        <td><%= link_to 'Edit', edit_admin_category_path(category) %></td>
+        <td><%= link_to('Delete', admin_category_path(category), {method: :delete, data: { confirm: 'Are you sure?' }}) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Category', new_admin_category_path %><br>
+<%= link_to 'Admin Home Page', admin_root_path %><br>
+<%= link_to 'Return to Site', root_path %><br>
+

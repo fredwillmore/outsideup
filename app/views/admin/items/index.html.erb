@@ -1,0 +1,36 @@
+<h1>Listing items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Display order</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.display_order %></td>
+        <td><%= item.name %></td>
+        <td><%= item.description %></td>
+        <td><%= item.category_id %></td>
+        <td><%= link_to 'Show', admin_item_path(item) %></td>
+        <td><%= link_to 'Edit', edit_admin_item_path(item) %></td>
+        <td><%= link_to('Delete', admin_item_path(item), {method: :delete, data: { confirm: 'Are you sure?' }}) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item', new_admin_item_path %><br>
+<%= link_to 'Admin Home Page', admin_root_path %><br>
+<%= link_to 'Return to Site', root_path %><br>
+

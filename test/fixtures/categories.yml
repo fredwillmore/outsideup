@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  display_order: 1
+  name: MyString
+  description: MyString
+  parent_category_id: 1
+
+two:
+  display_order: 1
+  name: MyString
+  description: MyString
+  parent_category_id: 1

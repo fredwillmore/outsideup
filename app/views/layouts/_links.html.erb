@@ -1,0 +1,25 @@
+<div class="row links">
+    <div class="col-md-12" >
+<%=
+    links = []
+    if page=='home'
+      links << "<b>Home</b>"
+    else
+      links << link_to("Home", "/")
+    end
+    @parent_categories.each do |pc|
+      if page=='parent_category' && id == pc.slug
+        links << "<b>#{pc.name}</b>"
+      else
+        links << link_to(pc.name, "/#{pc.slug}")
+      end
+    end
+    if page=='contact'
+      links << "<b>Contact</b>"
+    else
+      links << link_to("Contact", "/contact")
+    end
+    raw links.join " &nbsp; "
+%>
+    </div>
+</div>

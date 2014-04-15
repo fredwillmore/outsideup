@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Display order:</strong>
+  <%= @parent_category.display_order %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @parent_category.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @parent_category.description %>
+</p>
+
+<p>
+  <%= image_tag @parent_category.photo.url %>
+</p>
+
+<%= link_to 'Edit', edit_admin_parent_category_path(@parent_category) %> |
+<%= link_to 'Back', admin_parent_categories_path %>

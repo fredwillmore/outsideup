@@ -1,0 +1,151 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: arial, verdana, helvetica;
+//  background-image: url(/assets/bg.gif);
+////  background-position: 50% 50%;
+//  background-repeat: repeat-y;
+//  background-color: #21813F;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  height: 100%;
+}
+
+$blue:   #2F78BD;
+$red:    #A21D21;
+$green:	 #21813F;
+$yellow: #EDE210;
+
+.bg-color {
+  position: absolute;
+  height: 1000%;
+  z-index: -1;
+}
+#bg-color-left {
+  @extend .bg-color;
+  background-color: $blue;
+  width: 10%;
+}
+#bg-color-right {
+  @extend .bg-color;
+  position: absolute;
+  background-color: $green;
+  left: 90%;
+  width: 10%;
+}
+
+.column{
+  border: solid 0px; vertical-align: top;
+  margin: 10px;
+}
+
+.column-left{
+  @extend .column;
+  float: left; width:300px; text-align: right;
+}
+
+.column-right{
+  @extend .column;
+  display: inline-block;
+  /*float: right; */
+  width:270px;
+  .button {
+    width: 140px;
+  }
+}
+
+.column-center{
+  @extend .column;
+  display: inline-block;
+  width:200px;
+  text-align: center;
+  .button {
+    width: 190px;
+  }
+}
+
+.item-row {
+  text-align: center;
+  padding-left: 100px;
+  padding-bottom: 30px;
+  width:600px;
+  clear: both;
+}
+.item-left{
+  float: left; width:300px;
+}
+.item-right{
+  display: inline-block;
+  /*float: right; */
+  width:270px;
+}
+//.item-text{
+//  margin-left:auto;
+//  margin-right:auto;
+//  width:100px;
+//}
+.item-name {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 12pt;
+}
+.item-description {
+  font-style: italic;
+  font-size: 9pt;
+}
+
+.button{
+  border: 0px;
+  vertical-align:middle;
+  width: 100px;
+  height:50px;
+  background-color: #ababab;
+  text-align:center;
+  font-weight: bold;
+  font-size: 10.5pt;
+  a { color: #111111; }
+}
+
+.button-contact {
+  @extend .button;
+  margin-left:auto;
+  margin-right:auto;
+  width: 190px;
+}
+.button-contact-pc {
+  @extend .button;
+  width: 190px;
+  margin-top: 40px;
+  margin-left: 100px;
+}
+
+#container {
+  width: 660px;
+}
+
+#header, #footer, .links {
+  width: 100%;
+}
+#header {
+  background-color: #A21D21;
+}
+#footer {
+  text-align:center;
+  padding-top: 20px;
+}
+.links {
+  font-size: 8pt;
+  font-family: verdana, arial, helvetica;
+  padding-left: 90px;
+  text-align:center;
+}
+.category-name {
+  border-radius: 5px;
+//  margin-left: 180px;
+//  margin-right: 5px;
+  padding: 10px;
+  background-color: #CCCCCC;
+}

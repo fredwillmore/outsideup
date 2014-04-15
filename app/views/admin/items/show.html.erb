@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Display order:</strong>
+  <%= @item.display_order %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @item.description %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @item.category_id %>
+</p>
+
+<p>
+  <%= image_tag @item.photo.url %>
+</p>
+
+<%= link_to 'Edit', edit_admin_item_path(@item) %> |
+<%= link_to 'Back', admin_items_path %>

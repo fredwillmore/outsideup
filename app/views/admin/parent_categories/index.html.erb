@@ -1,0 +1,33 @@
+<h1>Listing parent_categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Display order</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parent_categories.each do |parent_category| %>
+      <tr>
+        <td><%= parent_category.display_order %></td>
+        <td><%= parent_category.name %></td>
+        <td><%= parent_category.description %></td>
+        <td><%= link_to 'Show', admin_parent_category_path(parent_category) %></td>
+        <td><%= link_to 'Edit', edit_admin_parent_category_path(parent_category) %></td>
+        <td><%= link_to('Delete', admin_parent_category_path(parent_category), {method: :delete, data: { confirm: 'Are you sure?' }}) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parent category', new_admin_parent_category_path %><br>
+<%= link_to 'Admin Home Page', admin_root_path %><br>
+<%= link_to 'Return to Site', root_path %><br>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8" >
+  <meta name="DESCRIPTION" content="Indoor and outdoor furniture, planters, decks, platforms and structures">
+  <meta name="KEYWORDS" content="furniture, planters, decks, platforms, structures, recovered materials, recycled">
+  <link rel="Shortcut Icon" href="./favicon.ico">
+  <%
+#  <title>Outside Up - < %= params['pcatname'].empty? ? "Fresh Interactive Design" : params['pcatname'] % ></title>
+  %>
+  <title>Outside Up - Fresh Interactive Design</title>
+</head>
+<body>
+<table width="780" cellpadding="0" cellspacing="0" border="0">
+<%
+	if false # ($params['page'] == 'pcat'){
+%>
+  <tr>
+    <td colspan="8">
+      <%= image_tag "outsideup_sm.gif", alt: "OutsideUp - Fresh Interactive Design", usemap: "#contact" %>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="8">
+      <div class="red" style="vertical-align:middle; width: 660px; height:84px; text-align:right;">
+        <div style="font-size:36px; padding:20px;"><b><%= parent_category['name'] %></b></div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <!--old colspan calculation: if($params['page'] == 'home'){ echo "6"; } else if($params['page'] == 'pcat'){ echo "4"; }  else if($params['page'] == 'contact'){ echo "2"; }-->
+    <td colspan="6" class="sm" align="center">
+    <br />&nbsp;<br />
+<%
+#	dsp_nav($params);
+%>
+    <br />&nbsp;<br />
+    </td>
+    <td colspan="2"></td>
+  </tr>
+<%
+	else
+%>
+  <tr>
+    <td colspan="8">
+      <%= image_tag "outsideup.gif", alt: "OutsideUp - Fresh Interactive Design" %>
+    </td>
+  </tr>
+<%
+    end
+%>
