@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 
+# production environment has this version of rake
+gem 'rake', '0.9.2.2'
+
 # Use postgres as the database for Active Record
 gem 'pg'
 
