@@ -48,7 +48,8 @@ gem 'thin', group: :development
 gem 'better_errors', group: :development
 
 #gem "paperclip", "~> 4.1"
-gem 'paperclip', github: 'thoughtbot/paperclip'
+#gem 'paperclip', github: 'thoughtbot/paperclip'
+gem "paperclip"
 
 # gem "twitter-bootstrap-rails"
 gem 'bootstrap-sass'
