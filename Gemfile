@@ -20,6 +20,9 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'therubyracer'
+gem 'execjs'
+# following instructions here: http://stackoverflow.com/questions/7092107/rails-could-not-find-a-javascript-runtime
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
