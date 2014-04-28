@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   protected
   def admin_required
     authenticate_or_request_with_http_basic do |username, password|
-      username=="outsideup" && password=="0uts1deup"
+      username=="outsideup" && password==Rails.application.secrets.admin_password
     end # if RAILS_ENV == 'production' || params[:admin_http] # I got this here but I don't know if I need it: http://stackoverflow.com/questions/119197/the-rails-way-namespaces
   end
 end
