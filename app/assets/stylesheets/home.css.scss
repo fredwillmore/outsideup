@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+
 body {
   font-family: arial, verdana, helvetica;
 //  background-image: url(/assets/bg.gif);
@@ -40,18 +43,21 @@ $yellow: #EDE210;
 .column{
   border: solid 0px; vertical-align: top;
   margin: 10px;
+  width:300px; text-align: center;
 }
 
-.column-left{
+.column-left {
   @extend .column;
-  float: left; width:300px; text-align: right;
+
+  .col-md-4 {
+    background-color: blue;
+    text-align: right;
+  }
+
 }
 
 .column-right{
   @extend .column;
-  display: inline-block;
-  /*float: right; */
-  width:270px;
   .button {
     width: 140px;
   }
@@ -74,14 +80,14 @@ $yellow: #EDE210;
   width:600px;
   clear: both;
 }
-.item-left{
-  float: left; width:300px;
-}
-.item-right{
-  display: inline-block;
-  /*float: right; */
-  width:270px;
-}
+//.item-left{
+//  float: left; width:300px;
+//}
+//.item-right{
+//  display: inline-block;
+//  /*float: right; */
+//  width:270px;
+//}
 //.item-text{
 //  margin-left:auto;
 //  margin-right:auto;
@@ -126,8 +132,8 @@ $yellow: #EDE210;
   width: 660px;
 }
 
-#header, #footer, .links {
-  width: 100%;
+#header, #footer {
+//  width: 100%;
 }
 #header {
   background-color: #A21D21;
@@ -139,7 +145,6 @@ $yellow: #EDE210;
 .links {
   font-size: 8pt;
   font-family: verdana, arial, helvetica;
-  padding-left: 90px;
   text-align:center;
 }
 .category-name {
@@ -149,3 +154,4 @@ $yellow: #EDE210;
   padding: 10px;
   background-color: #CCCCCC;
 }
+
