@@ -11,6 +11,8 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+/db/schema.sql
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
@@ -24,4 +26,6 @@ public/assets/source_maps/
 # 
 .idea/
 
+# don't share secrets
+/config/secrets.yml
 
