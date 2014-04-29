@@ -66,4 +66,3 @@ gem 'friendly_id'
 
 gem 'simple_form'
 gem 'mail_form'
-gem 'haml-rails'
