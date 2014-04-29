@@ -11,6 +11,8 @@ Outsideup::Application.routes.draw do
 
   get '/:id' => 'home#parent_category'
 
+  resources "contacts", only: [:new, :create]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

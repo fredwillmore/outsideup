@@ -24,7 +24,7 @@ $yellow: #EDE210;
 
 .bg-color {
   position: absolute;
-  height: 1000%;
+  height: 100%;
   z-index: -1;
 }
 #bg-color-left {
@@ -155,3 +155,29 @@ $yellow: #EDE210;
   background-color: #CCCCCC;
 }
 
+.home-row {
+  padding-top: 20px;
+  .left {
+    align-content: right;
+  }
+  .center {
+    text-align: center;
+  }
+  .button {
+    width:190px;
+  }
+
+}
+
+
+// ok what about these mixins
+//.wrapper {
+//  .make-row();
+//}
+//.content-main {
+//  .make-lg-column(8);
+//}
+//.content-secondary {
+//  .make-lg-column(3);
+//  .make-lg-column-offset(1);
+//}

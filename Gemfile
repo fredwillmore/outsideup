@@ -63,3 +63,7 @@ gem 'bootstrap-sass'
 # If you want to use SASS you should use boostrap-sass or bootstrap-sass-rails. Twitter-bootstrap-rails uses LESS source. If you were to include both there would probably be conflicts. All of them include javascript for bootstrap already and integrate into the asset pipeline.
 
 gem 'friendly_id'
+
+gem 'simple_form'
+gem 'mail_form'
+gem 'haml-rails'

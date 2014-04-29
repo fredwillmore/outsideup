@@ -29,3 +29,7 @@ public/assets/source_maps/
 # don't share secrets
 /config/secrets.yml
 
+
+public/system/items/photos/*
+public/system/parent_categories/photos/*
+

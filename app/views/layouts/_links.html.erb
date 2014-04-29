@@ -17,7 +17,7 @@
     if page=='contact'
       links << "<b>Contact</b>"
     else
-      links << link_to("Contact", "/contact")
+      links << link_to("Contact", new_contact_path)
     end
     raw links.join " &nbsp; "
 %>

@@ -13,6 +13,7 @@ seed_data['ParentCategories'].each do |parent_category|
   pc.display_order = parent_category['display_order']
   # pc.slug = parent_category['name'].gsub(/[^a-zA-Z\s]/m, '').gsub(/[\s]+/, '-').downcase
   pc.slug = nil
+  pc.photo = File.open("#{Rails.application.secrets.photo_directory}/#{parent_category['name'].gsub(/[^a-zA-Z\s\/]/m, '').gsub(/[\s\/]+/, '-').downcase}.jpg") rescue nil
   pc.save
 end
 
