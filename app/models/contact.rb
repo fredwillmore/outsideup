@@ -1,4 +1,5 @@
 class Contact < MailForm::Base
+# class Contact < ActionMailer::Base
   attribute :name,      :validate => true
   attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :message
@@ -13,4 +14,5 @@ class Contact < MailForm::Base
         :from => %("#{name}" <#{email}>)
     }
   end
+
 end

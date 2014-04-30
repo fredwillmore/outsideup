@@ -48,19 +48,10 @@ $yellow: #EDE210;
 
 .column-left {
   @extend .column;
-
-  .col-md-4 {
-    background-color: blue;
-    text-align: right;
-  }
-
 }
 
 .column-right{
   @extend .column;
-  .button {
-    width: 140px;
-  }
 }
 
 .column-center{
@@ -103,26 +94,31 @@ $yellow: #EDE210;
   font-size: 9pt;
 }
 
-.button{
+.btn{
   border: 0px;
   vertical-align:middle;
-  width: 100px;
-  height:50px;
+//  height:50px;
+  padding: 20px;
   background-color: #ababab;
   text-align:center;
   font-weight: bold;
   font-size: 10.5pt;
-  a { color: #111111; }
+  border-radius: 5px;
+  width: 190px;
+}
+.btn-primary {
+  color: #111;
 }
 
+
 .button-contact {
-  @extend .button;
+  @extend .btn;
   margin-left:auto;
   margin-right:auto;
   width: 190px;
 }
 .button-contact-pc {
-  @extend .button;
+  @extend .btn;
   width: 190px;
   margin-top: 40px;
   margin-left: 100px;
@@ -138,7 +134,7 @@ $yellow: #EDE210;
 #header {
   background-color: #A21D21;
 }
-#footer {
+.footer-row, .home-row {
   text-align:center;
   padding-top: 20px;
 }
@@ -146,8 +142,17 @@ $yellow: #EDE210;
   font-size: 8pt;
   font-family: verdana, arial, helvetica;
   text-align:center;
+  a {
+    color: $red;
+    &:visited {
+      color: $red;
+    }
+    &:hover {
+      color: $red;
+    }
+  }
 }
-.category-name {
+.page-name {
   border-radius: 5px;
 //  margin-left: 180px;
 //  margin-right: 5px;
@@ -157,18 +162,26 @@ $yellow: #EDE210;
 
 .home-row {
   padding-top: 20px;
-  .left {
-    align-content: right;
+  .left, .center, .right {
+//    width: 200px;
+    min-width: 200px;
+    max-width: 220px;
   }
   .center {
     text-align: center;
   }
-  .button {
-    width:190px;
+  .right {
+    text-align: right;
   }
-
+  .btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
+label {
+  vertical-align: top;
+}
 
 // ok what about these mixins
 //.wrapper {
@@ -181,3 +194,22 @@ $yellow: #EDE210;
 //  .make-lg-column(3);
 //  .make-lg-column-offset(1);
 //}
+
+
+.header-img-container {
+  background-color: $red;
+  max-width: 100%;
+  height: auto;
+}
+//
+//.header-img-lg img {
+//  max-width: 660px;
+//  min-width: 320px;
+////  background: transparent url('/assets/outsideup.gif') no-repeat scroll center center;
+////  background-size: contain;
+//}
+
+.space {
+  min-height: 1px;
+  width: 1px;
+}

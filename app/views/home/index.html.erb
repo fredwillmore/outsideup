@@ -1,25 +1,23 @@
 <%= render partial: 'layouts/header', locals: {page: 'home'} %>
 
-      <div class="home-row row">
-        <div class="col-xs-4 left">
-            <%= link_to raw("<button class=\"button\" >#{@parent_categories[0].name}</button>"), "/#{@parent_categories[0].slug}" %>
-            <br>
-            <%= image_tag @parent_categories[0].photo.url(:medium), alt: @parent_categories[0].name %>
-        </div>
-        <div class="col-xs-4 center">
-          <%= link_to raw("<button class=\"button\">#{@parent_categories[1].name}</button>"), "/#{@parent_categories[1].slug}" %>
-          <br>
-          <%= image_tag @parent_categories[1].photo.url(:medium), alt: @parent_categories[1].name %>
-        </div>
-        <div class="col-xs-4">
-          <%= link_to raw("<button class=\"button\">#{@parent_categories[2].name}</button>"), "/#{@parent_categories[2].slug}" %>
-          <br>
-          <%= image_tag @parent_categories[2].photo.url(:medium), alt: @parent_categories[2].name %>
+      <div class="row home-row">
+          <div class="col-xs-4 left">
+              <%= link_to( @parent_categories[0].name, "/#{@parent_categories[0].slug}", {class: 'btn btn-primary'}) %>
+              <%= image_tag @parent_categories[0].photo.url(:medium), alt: @parent_categories[0].name %>
+          </div>
+          <div class="col-xs-4 center">
+              <%= link_to( @parent_categories[1].name, "/#{@parent_categories[1].slug}", {class: 'btn btn-primary'}) %>
+              <%= image_tag @parent_categories[1].photo.url(:medium), alt: @parent_categories[1].name %>
+          </div>
+          <div class="col-xs-4 right">
+              <%= link_to( @parent_categories[2].name, "/#{@parent_categories[2].slug}", {class: 'btn btn-primary'}) %>
+              <%= image_tag @parent_categories[2].photo.url(:medium), alt: @parent_categories[2].name %>
+          </div>
+      </div>
+      <div class="row home-row">
+        <div class="col-xs-12">
+          <%= link_to( "Contact/Order", new_contact_path, {class: 'btn btn-primary'}) %>
         </div>
       </div>
-      <div class="row" style="padding-top: 20px;">
-        <div class="col-xs-12" style="text-align: center;"><%= link_to raw("<button class=\"button-contact\">Contact/Order</button>"), "contact" %></div>
-      </div>
-
 
 <%= render partial: 'layouts/footer', locals: {page: 'home'} %>
