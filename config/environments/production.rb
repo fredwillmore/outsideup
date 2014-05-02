@@ -80,11 +80,14 @@ Outsideup::Application.configure do
 
   Paperclip.options[:command_path] = "/usr/bin/"
 
+  config.action_mailer.default_url_options = {
+      host:                 'mail.outsideup.com'
+  }
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       address:              'mail.outsideup.com',
       domain:               'outsideup.com',
-      host:               'outsideup.com',
       user_name:            Rails.application.secrets.smtp_user,
       password:             Rails.application.secrets.smtp_password,
       authentication:       'plain',
