@@ -81,7 +81,7 @@ Outsideup::Application.configure do
   Paperclip.options[:command_path] = "/usr/bin/"
 
   config.action_mailer.default_url_options = {
-      host:                 'mail.outsideup.com'
+      host:                 'justhost.com'
   }
 
   config.action_mailer.delivery_method = :smtp
