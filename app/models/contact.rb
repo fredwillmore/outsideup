@@ -13,6 +13,8 @@ class Contact < MailForm::Base
         :to => Rails.application.secrets.contact_email,
         :from => %("#{name}" <#{email}>)
     }
+
+
   end
 
 end
