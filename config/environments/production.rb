@@ -83,6 +83,7 @@ Outsideup::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       address:              'mail.outsideup.com',
+      domain:               'outsideup.com',
       user_name:            Rails.application.secrets.smtp_user,
       password:             Rails.application.secrets.smtp_password,
       authentication:       'plain',
