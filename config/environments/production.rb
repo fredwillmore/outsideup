@@ -86,7 +86,8 @@ Outsideup::Application.configure do
       user_name:            Rails.application.secrets.smtp_user,
       password:             Rails.application.secrets.smtp_password,
       authentication:       'plain',
-      enable_starttls_auto: true
+      enable_starttls_auto: true,
+      openssl_verify_mode: 'none'
   }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
