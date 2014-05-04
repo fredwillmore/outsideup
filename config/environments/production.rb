@@ -86,13 +86,14 @@ Outsideup::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      address:              'smtp.gmail.com',
-      domain:               'gmail.com',
+      address:              'mail.outsideup.com',
+      domain:               'outsideup.com',
       port:                 587,
       user_name:            Rails.application.secrets.smtp_user,
       password:             Rails.application.secrets.smtp_password,
       authentication:       'plain',
       enable_starttls_auto: true,
+      openssl_verify_mode: 'none'
   }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true

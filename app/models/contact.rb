@@ -11,7 +11,7 @@ class Contact < MailForm::Base
     {
         :subject => "My Contact Form",
         :to => Rails.application.secrets.contact_email,
-        :from => %("#{name}" <#{email}>)
+        :from => %("Contact Form" <#{Rails.application.secrets.smtp_user}>)
     }
 
 
