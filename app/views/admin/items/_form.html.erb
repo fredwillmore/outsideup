@@ -1,4 +1,4 @@
-<%= form_for @item, url: admin_item_path(@item), :html => { :multipart => true } do |f| %>
+<%= form_for @item, url: @item.id ? admin_item_path(@item) : "/admin/items", :html => { :multipart => true } do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :display_order %><br>
-    <%= f.number_field :display_order %>
+    <%= @item.display_order %>
   </div>
   <div class="field">
     <%= f.label :name %><br>
@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description, rows: 8 %>
   </div>
   <div class="field">
     <%= f.label :category_id %><br>
-    <%= f.number_field :category_id %>
+    <%= f.select( :category_id, Hash[ Category.all.map do |c| ["#{c.parent_category.name} - #{c.name}", c.id] end] )%>
   </div>
   <div class="field">
     <%= f.label :photo %><br>

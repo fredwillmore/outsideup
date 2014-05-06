@@ -66,3 +66,5 @@ gem 'friendly_id'
 
 gem 'simple_form'
 gem 'mail_form'
+
+gem 'acts_as_tree'

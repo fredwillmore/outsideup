@@ -13,11 +13,7 @@
 </head>
 
 <body>
-<% unless params['hide-bg-color'] %>
-    <div id="bg-color-left"></div>
-    <div id="bg-color-right"></div>
-<% end %>
-        <div class="red header-img-container">
+    <div class="red header-img-container">
             <% if page=='home' || page=='contact' %>
                 <%= page=='contact' ? link_to( image_tag( "outsideup.gif", alt: "OutsideUp - Fresh Interactive Design", class: "header-img-lg img-responsive" ), root_path ) :  image_tag( "outsideup.gif", alt: "OutsideUp - Fresh Interactive Design", class: "header-img-lg img-responsive") %>
             <% else %>
@@ -26,3 +22,8 @@
             <% end %>
         </div>
         <div class="container">
+          <% unless params['hide-bg-color'] %>
+              <div class="row">
+                  <div class="col-xs-1" id="bg-color-left"></div>
+                  <div class="col-xs-10" style="text-align: center;">
+          <% end %>

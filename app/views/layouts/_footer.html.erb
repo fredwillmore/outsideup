@@ -1,11 +1,16 @@
         <div class="row footer-row">
-            <div class="col-xs-12" >
+            <div class="col-xs-4" >
               <%= render partial: 'layouts/links', locals: {page: page, id: @parent_category.nil? ? '' : @parent_category.slug } %>
               <br />&nbsp;<br />
               All designs copyright &copy;<%= Time.now.year %> OutsideUp<br />
               site engineered by <a href="http://www.aztronaut.com" onclick="window.open(this.href);">aztronaut</a>
             </div>
         </div>
+        <% unless params['hide-bg-color'] %>
+                </div>
+                <div class="col-xs-1" id="bg-color-right"></div>
+            </div>
+        <% end %>
     </div><!-- end container -->
 
 </body>

@@ -1,11 +1,12 @@
 class Admin::ParentCategoriesController < ApplicationController
-  before_action :set_parent_category, only: [:show, :edit, :update, :destroy]
+  layout 'admin'
+  before_action :set_parent_category, only: [:show, :edit, :update, :destroy, :move_up, :move_down]
   before_filter :admin_required
 
   # GET /parent_categories
   # GET /parent_categories.json
   def index
-    @parent_categories = ParentCategory.all
+    @parent_categories = ParentCategory.all.order(:display_order)
   end
 
   # GET /parent_categories/1
@@ -55,11 +56,39 @@ class Admin::ParentCategoriesController < ApplicationController
   # DELETE /parent_categories/1
   # DELETE /parent_categories/1.json
   def destroy
+    # TODO: this display_order functionality would be a nice thing to package as a gem
+    ParentCategory.where("display_order > ?", @parent_category.display_order).each do |p|
+      p.dec
+    end
     @parent_category.destroy
     respond_to do |format|
       format.html { redirect_to parent_categories_url }
       format.json { head :no_content }
     end
+  end
+
+  # TODO: this display_order functionality would be a nice thing to package as a gem
+  def move_up
+    if @parent_category.display_order > 1
+      ParentCategory.where(display_order: @parent_category.display_order-1).first.inc
+      @parent_category.dec
+      notice = "Successfully moved #{@parent_category.name} to position #{@parent_category.display_order}"
+    else
+      notice = "#{@parent_category.name} is already in the top position"
+    end
+    redirect_to admin_parent_categories_path, notice: notice
+  end
+
+  def move_down
+    p = ParentCategory.where(display_order: @parent_category.display_order+1).first
+    if p
+      p.dec
+      @parent_category.inc
+      notice = "Successfully moved #{@parent_category.name} to position #{@parent_category.display_order}"
+    else
+      notice = "#{@parent_category.name} is already in the bottom position"
+    end
+    redirect_to admin_parent_categories_path, notice: notice
   end
 
   private

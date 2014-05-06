@@ -27,6 +27,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    acts_as_tree (1.6.0)
+      activerecord (>= 3.0.0)
     arel (5.0.1.20140414130214)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -146,6 +148,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_tree
   better_errors
   bootstrap-sass
   coffee-rails (~> 4.0.0)

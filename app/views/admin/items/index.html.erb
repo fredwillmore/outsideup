@@ -1,29 +1,34 @@
-<h1>Listing items</h1>
-
 <table>
-  <thead>
-    <tr>
-      <th>Display order</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Category</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
   <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.display_order %></td>
-        <td><%= item.name %></td>
-        <td><%= item.description %></td>
-        <td><%= item.category_id %></td>
-        <td><%= link_to 'Show', admin_item_path(item) %></td>
-        <td><%= link_to 'Edit', edit_admin_item_path(item) %></td>
-        <td><%= link_to('Delete', admin_item_path(item), {method: :delete, data: { confirm: 'Are you sure?' }}) %></td>
-      </tr>
+    <% @parent_categories.each do |parent_category| %>
+      <% parent_category.categories.order(:display_order).each do |category| %>
+        <tr>
+          <td colspan="7"><h2><%= category.name %></h2></td>
+        </tr>
+          <tr>
+            <th>Display order</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        <% category.items.order(:display_order).each do |item| %>
+          <tr>
+            <td><%= item.display_order %></td>
+            <td><%= item.name %></td>
+            <td><%= truncate item.description, length: 30 %></td>
+            <td><%= link_to 'Show', admin_item_path(item) %></td>
+            <td><%= link_to 'Edit', edit_admin_item_path(item) %></td>
+            <td><%= link_to 'Delete', admin_item_path(item), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Move Up', move_up_admin_item_path(item) %></td>
+            <td><%= link_to 'Move Down', move_down_admin_item_path(item) %></td>
+          </tr>
+        <% end %>
+      <% end %>
     <% end %>
   </tbody>
 </table>
