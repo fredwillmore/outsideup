@@ -26,6 +26,8 @@ gem 'execjs'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+# gem 'jquery-mobile-rails' # not compatible w rails 4
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -67,4 +69,8 @@ gem 'friendly_id'
 gem 'simple_form'
 gem 'mail_form'
 
+<<<<<<< Updated upstream
 gem 'fancybox2-rails'
+=======
+gem 'fancybox2-rails'
+>>>>>>> Stashed changes
