@@ -56,10 +56,6 @@ class Admin::ParentCategoriesController < ApplicationController
   # DELETE /parent_categories/1
   # DELETE /parent_categories/1.json
   def destroy
-    # TODO: this display_order functionality would be a nice thing to package as a gem
-    ParentCategory.where("display_order > ?", @parent_category.display_order).each do |p|
-      p.dec
-    end
     @parent_category.destroy
     respond_to do |format|
       format.html { redirect_to parent_categories_url }
@@ -69,25 +65,12 @@ class Admin::ParentCategoriesController < ApplicationController
 
   # TODO: this display_order functionality would be a nice thing to package as a gem
   def move_up
-    if @parent_category.display_order > 1
-      ParentCategory.where(display_order: @parent_category.display_order-1).first.inc
-      @parent_category.dec
-      notice = "Successfully moved #{@parent_category.name} to position #{@parent_category.display_order}"
-    else
-      notice = "#{@parent_category.name} is already in the top position"
-    end
+    notice = @parent_category.move_up
     redirect_to admin_parent_categories_path, notice: notice
   end
 
   def move_down
-    p = ParentCategory.where(display_order: @parent_category.display_order+1).first
-    if p
-      p.dec
-      @parent_category.inc
-      notice = "Successfully moved #{@parent_category.name} to position #{@parent_category.display_order}"
-    else
-      notice = "#{@parent_category.name} is already in the bottom position"
-    end
+    notice = @parent_category.move_down
     redirect_to admin_parent_categories_path, notice: notice
   end
 
@@ -95,6 +78,7 @@ class Admin::ParentCategoriesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_parent_category
       @parent_category = ParentCategory.find(params[:id])
+      @parent_category.orderable :display_order # I'm already calling this in Category::initialize, but apparently `find` doesn't ever `initialize` - be a lot cooler if it did...
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

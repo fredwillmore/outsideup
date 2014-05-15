@@ -30,6 +30,5 @@ public/assets/source_maps/
 /config/secrets.yml
 
 
-public/system/items/photos/*
-public/system/parent_categories/photos/*
+public/system/*/photos/*/*/*/*/*
 

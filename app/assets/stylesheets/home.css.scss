@@ -14,73 +14,37 @@ body {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
-  height: 100%;
 }
-
+body, html, .container, .main-row {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
 $blue:   #2F78BD;
 $red:    #A21D21;
 $green:	 #21813F;
 $yellow: #EDE210;
 
 .bg-color {
-  min-height: 100px;
-  max-height: 100px;
-  min-width: 10px;
-
+  height: 100%;
+  min-width: 5px;
+  max-width: 500px;
 }
 #bg-color-left {
   @extend .bg-color;
   background-color: $blue;
+  height: 100%;
 }
 #bg-color-right {
   @extend .bg-color;
   background-color: $green;
+  height: 100%;
 }
 
-.column{
-  border: solid 0px; vertical-align: top;
-  margin: 10px;
-  width:300px; text-align: center;
+.item-column{
+  width: 320px
 }
 
-.column-left {
-  @extend .column;
-}
-
-.column-right{
-  @extend .column;
-}
-
-.column-center{
-  @extend .column;
-  display: inline-block;
-  width:200px;
-  text-align: center;
-  .button {
-    width: 190px;
-  }
-}
-
-.item-row {
-  text-align: center;
-  padding-left: 100px;
-  padding-bottom: 30px;
-  width:600px;
-  clear: both;
-}
-//.item-left{
-//  float: left; width:300px;
-//}
-//.item-right{
-//  display: inline-block;
-//  /*float: right; */
-//  width:270px;
-//}
-//.item-text{
-//  margin-left:auto;
-//  margin-right:auto;
-//  width:100px;
-//}
 .item-name {
   padding-top: 10px;
   font-weight: bold;
@@ -94,35 +58,26 @@ $yellow: #EDE210;
 .btn{
   border: 0px;
   vertical-align:middle;
-//  height:50px;
   padding: 20px;
   background-color: #ababab;
   text-align:center;
   font-weight: bold;
   font-size: 10.5pt;
   border-radius: 5px;
-  width: 190px;
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .btn-primary {
   color: #111;
 }
 
-
-.button-contact {
-  @extend .btn;
-  margin-left:auto;
-  margin-right:auto;
-  width: 190px;
-}
 .button-contact-pc {
-  @extend .btn;
-  width: 190px;
-  margin-top: 40px;
-  margin-left: 100px;
+  margin-left: 10px;
 }
 
-#container {
-  width: 660px;
+.container {
+  width: 100%;
 }
 
 #header, #footer {
@@ -160,9 +115,9 @@ $yellow: #EDE210;
 .home-row {
   padding-top: 20px;
   .left, .center, .right {
-//    width: 200px;
-    min-width: 200px;
-    max-width: 220px;
+    width: 215px;
+//    min-width: 200px;
+//    max-width: 220px;
   }
   .center {
     text-align: center;

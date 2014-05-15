@@ -1,4 +1,4 @@
-<%= form_for(@category, url: admin_category_path(@category)) do |f| %>
+<%= form_for @category, url: @category.id ? admin_category_path(@category) : "/admin/categories" do |f| %>
   <% if @category.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
@@ -11,10 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :display_order %><br>
-    <%= f.number_field :display_order %>
-  </div>
+  <% unless params['action'] == 'new' %>
+      <div class="field">
+        <%= f.label :display_order %>: <%= @category.display_order %>
+      </div>
+  <% end %>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -25,7 +26,7 @@
   </div>
   <div class="field">
     <%= f.label :parent_category_id %><br>
-    <%= f.number_field :parent_category_id %>
+    <%= f.select( :parent_category_id, Hash[ ParentCategory.all.map do |p| [p.name, p.id] end ] )%>
   </div>
   <div class="actions">
     <%= f.submit %>

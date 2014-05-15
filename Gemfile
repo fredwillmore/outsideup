@@ -69,8 +69,5 @@ gem 'friendly_id'
 gem 'simple_form'
 gem 'mail_form'
 
-<<<<<<< Updated upstream
 gem 'fancybox2-rails'
-=======
-gem 'fancybox2-rails'
->>>>>>> Stashed changes
+gem 'binding_of_caller'

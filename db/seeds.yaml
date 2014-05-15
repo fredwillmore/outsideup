@@ -179,7 +179,7 @@ Items:
       <br />--Crosses driveway to enclose side patio
   -
     name: Huge Patio Roof
-    display_order: 40
+    display_order: 1
     category_name: SHELTERS
     description: |-
       --Built with chunky 6x6 posts and double beams
@@ -188,7 +188,7 @@ Items:
       <br />--Color-matched gutter
   -
     name: Right Angle Roof
-    display_order: 41
+    display_order: 2
     category_name: SHELTERS
     description: |-
       --Stand-alone roof surrounds stone patio
@@ -196,7 +196,7 @@ Items:
       <br />--Clean, minimal design
   -
     name: Patio Trellis
-    display_order: 42
+    display_order: 3
     category_name: SHELTERS
     description: |-
       --All-cedar shelter
@@ -204,7 +204,7 @@ Items:
       <br />--The other half supports climbing vines
   -
     name: Sleek Patio Pergola
-    display_order: 43
+    display_order: 4
     category_name: SHELTERS
     description: |-
       --Encloses concrete pad to make an outdoor dining area
@@ -212,7 +212,7 @@ Items:
       <br />
   -
     name: Peaked Entry Trellis
-    display_order: 44
+    display_order: 5
     category_name: SHELTERS
     description: |-
       --Mirrors classic Hawthorne house
@@ -220,7 +220,7 @@ Items:
       <br />--Wide floating handrails
   -
     name: Chunky Pergola
-    display_order: 45
+    display_order: 6
     category_name: SHELTERS
     description: |-
       --Fat 6x6 cedar posts
@@ -229,7 +229,7 @@ Items:
       <br />
   -
     name: Swoopy Patio Roof
-    display_order: 46
+    display_order: 7
     category_name: SHELTERS
     description: |-
       --Big 16x18 foot roof covers back patio
@@ -238,7 +238,7 @@ Items:
       <br />
   -
     name: Pergola Patio Roof
-    display_order: 47
+    display_order: 8
     category_name: SHELTERS
     description: |-
       --Notched and custom cut rafters
@@ -246,14 +246,14 @@ Items:
       <br />--Beautiful, all-cedar construction
   -
     name: Retro Entryway
-    display_order: 48
+    display_order: 9
     category_name: SHELTERS
     description: |-
       --Entry structure solves issues with a low roof line while integrating with the house.
       <br />--Mid-century design includes cantilevered beams, long-fingered rafters and steep supports.
   -
     name: Mod Roof Addition
-    display_order: 49
+    display_order: 10
     category_name: SHELTERS
     description: |-
       --Clear roof panels, long rafters and 2x6 beams add shelter to existing trellis.
@@ -261,7 +261,7 @@ Items:
       <br />--Roof also covers recycling pen behind.
   -
     name: Lofted Pergola
-    display_order: 50
+    display_order: 11
     category_name: SHELTERS
     description: |-
       --Big cedar rafters & beams
@@ -269,7 +269,7 @@ Items:
       <br />--Hidden clear roof over doors provides shelter from the rain
   -
     name: Mid-Century Awning
-    display_order: 51
+    display_order: 12
     category_name: SHELTERS
     description: |-
       --Sleek design provides sun break and interest for 50s ranch
@@ -277,7 +277,7 @@ Items:
       <br />--Project includes matching trellis above garage door
   -
     name: Cantilevered Entry
-    display_order: 52
+    display_order: 13
     category_name: SHELTERS
     description: |-
       --Mid-century inspired design includes slanted posts
@@ -285,7 +285,7 @@ Items:
       <br />--Clear twin-wall roof panel
   -
     name: Tea Room Shelter
-    display_order: 53
+    display_order: 14
     category_name: SHELTERS
     description: |-
       --Cedar clad posts and beams
@@ -294,7 +294,7 @@ Items:
       <br />--Built over existing deck
   -
     name: Barbeque Roof
-    display_order: 54
+    display_order: 15
     category_name: SHELTERS
     description: |-
       --Cantilevered roof protects outdoor kitchen area
@@ -302,14 +302,14 @@ Items:
       <br />--Twin-wall poly roofing
   -
     name: Cantilevered Side Roof
-    display_order: 55
+    display_order: 16
     category_name: SHELTERS
     description: |-
       --Coordinates with larger patio roof
       <br />--All-cedar construction w/ twin-wall poly roofing
   -
     name: Backyard Pergola Roof
-    display_order: 56
+    display_order: 17
     category_name: SHELTERS
     description: |-
       --Asymmetrical profile with steeply angled braces
@@ -317,7 +317,7 @@ Items:
       <br />--Tinted polycarbonate roofing
   -
     name: Sleek Backyard Shelter
-    display_order: 57
+    display_order: 18
     category_name: SHELTERS
     description: |-
       --Wide roof built over existing deck
@@ -325,7 +325,7 @@ Items:
       <br />--Tinted polycarbonate roofing
   -
     name: Bamboo Shade
-    display_order: 58
+    display_order: 19
     category_name: SHELTERS
     description: |-
       --Open structure filters sunshine and provides a more intimate atmosphere
@@ -333,14 +333,14 @@ Items:
       <br />--Commissioned for Por Que No restaurant
   -
     name: Free-Standing Shelter
-    display_order: 59
+    display_order: 20
     category_name: SHELTERS
     description: |-
       --Stand-alone structure protects existing deck
       <br />--Clean, minimal design built from treated lumber and tinted poly roofing
   -
     name: Balcony Roof
-    display_order: 60
+    display_order: 21
     category_name: SHELTERS
     description: |-
       --Clean post & beam structure protects upper deck
