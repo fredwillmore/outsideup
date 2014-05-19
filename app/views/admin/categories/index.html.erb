@@ -23,7 +23,14 @@
             <td><%= category.description %></td>
             <td><%= link_to 'Show', admin_category_path(category) %></td>
             <td><%= link_to 'Edit', edit_admin_category_path(category) %></td>
-            <td><%= link_to('Delete', admin_category_path(category), {method: :delete, data: { confirm: 'Are you sure?' }}) %></td>
+            <td><%=
+                  delete_confirm = 'Are you sure?'
+                  if category.items.count>0
+                    delete_confirm = delete_confirm + "\nDeleting this category will also delete the following dependent items:\n"
+                    delete_confirm = delete_confirm + category.items.map { |i| i.name }.join("\n")
+                  end
+                  link_to('Delete', admin_category_path(category), {method: :delete, data: { confirm: delete_confirm  }})
+            %></td>
             <td><%= link_to 'Move Up', move_up_admin_category_path(category) %></td>
             <td><%= link_to 'Move Down', move_down_admin_category_path(category) %></td>
           </tr>

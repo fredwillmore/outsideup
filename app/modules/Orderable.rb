@@ -1,8 +1,8 @@
 # TODO: this display_order functionality would be a nice thing to package as a gem
 module Orderable
 
-  mattr_accessor :order_field
-  mattr_accessor :parent_id
+  # mattr_accessor :order_field
+  # mattr_accessor :parent_id
 
   def orderable(order_field, parent_id=nil)
     self.order_field = order_field
@@ -19,19 +19,26 @@ module Orderable
 
   def shuffle_up
     return unless id
-    self.class.where(
-        parent_id => self.class.find(id).send(parent_id)
-    ).where(
+    instances = self.class.where(
         "#{order_field.to_s} > ?", send(order_field)
-    ).each do |i|
+    )
+    if parent_id
+      instances = instances.where(
+          parent_id => self.class.find(id).send(parent_id)
+      )
+    end
+    instances.each do |i|
       i.dec
     end
   end
 
   def reset_display_order
-    if changes[parent_id]
+    if changes[parent_id] || self[order_field].nil? || self[order_field].zero?
       shuffle_up
-      update_column order_field, (self.class.where.not(id: id).where(parent_id => send(parent_id)).order("#{order_field.to_s} DESC").first.send(order_field) rescue 0)+1
+      instances = self.class.where.not(id: id)
+      instances = instances.where(parent_id => send(parent_id)) if parent_id
+      current_last = instances.order("#{order_field.to_s}").last.send(order_field) || 0 rescue 0
+      self[order_field] = current_last+1
     end
   end
 

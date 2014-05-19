@@ -22,7 +22,14 @@
         <td><%= parent_category.description %></td>
         <td><%= link_to 'Show', admin_parent_category_path(parent_category) %></td>
         <td><%= link_to 'Edit', edit_admin_parent_category_path(parent_category) %></td>
-        <td><%= link_to('Delete', admin_parent_category_path(parent_category), {method: :delete, data: { confirm: 'Are you sure?' }}) %></td>
+        <td><%=
+            delete_confirm = 'Are you sure?'
+            if parent_category.categories.count>0
+              delete_confirm = delete_confirm + "\nDeleting this parent category will also delete the following dependent items:\n"
+              delete_confirm = delete_confirm + parent_category.categories.collect { |c| [c.name, c.items.map{ |i| " " + i.name }] }.flatten.join("\n")
+            end
+            link_to('Delete', admin_parent_category_path(parent_category), {method: :delete, data: { confirm: delete_confirm  }})
+        %></td>
         <td><%= link_to 'Move Up', move_up_admin_parent_category_path(parent_category) %></td>
         <td><%= link_to 'Move Down', move_down_admin_parent_category_path(parent_category) %></td>
       </tr>

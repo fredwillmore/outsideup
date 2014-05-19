@@ -30,8 +30,6 @@ class Admin::CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        @category.get_display_order
-        @category.save
         format.html { redirect_to admin_category_path(@category), notice: 'Category was successfully created.' }
         format.json { render action: 'show', status: :created, location: @category }
       else

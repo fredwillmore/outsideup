@@ -58,7 +58,7 @@ class Admin::ParentCategoriesController < ApplicationController
   def destroy
     @parent_category.destroy
     respond_to do |format|
-      format.html { redirect_to parent_categories_url }
+      format.html { redirect_to admin_parent_categories_url }
       format.json { head :no_content }
     end
   end

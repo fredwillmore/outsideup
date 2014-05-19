@@ -2,7 +2,7 @@ class ParentCategory < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
 
-  has_many :category
+  has_many :category, dependent: :destroy
 
   has_attached_file :photo, styles: { small: "200", medium: "300", large: "400" }, default_url: "/images/:style/missing.png"
   #validates :photo, :attachment_presence => true
@@ -10,12 +10,11 @@ class ParentCategory < ActiveRecord::Base
 
   include Orderable
 
-  def initialize
-    super
-    orderable :display_order
-  end
   before_save :reset_display_order
   before_destroy :shuffle_up
+  after_initialize :set_orderable_fields
+
+  attr_accessor :order_field, :parent_id
 
   def should_generate_new_friendly_id?
     name_changed? || slug.nil?
@@ -25,21 +24,9 @@ class ParentCategory < ActiveRecord::Base
     Category.where parent_category_id: id
   end
 
-  after_initialize :init
+  private
 
-  def inc
-    self.increment! :display_order, 1
-  end
-
-  def dec
-    self.decrement! :display_order, 1
-  end
-
-  def get_display_order
-    self.display_order ||= ParentCategory.order("display_order DESC").first.display_order+1 rescue 1 #will set the default value only if it's nil
-  end
-
-  def init
-    get_display_order
+  def set_orderable_fields
+    orderable :display_order
   end
 end

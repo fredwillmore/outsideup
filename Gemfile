@@ -71,3 +71,5 @@ gem 'mail_form'
 
 gem 'fancybox2-rails'
 gem 'binding_of_caller'
+
+gem 'rspec-rails', group: :test
