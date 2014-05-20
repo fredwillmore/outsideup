@@ -38,7 +38,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: outsideu_outsideup
+  database: outsideu_production
   pool: 5
   username: outsideu_outside
   password: <%= db_password %>
