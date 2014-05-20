@@ -259,22 +259,22 @@ Items:
       --Clear roof panels, long rafters and 2x6 beams add shelter to existing trellis.
       <br />--Designed to compliment original structure.
       <br />--Roof also covers recycling pen behind.
-  -
-    name: Lofted Pergola
-    display_order: 11
-    category_name: SHELTERS
-    description: |-
-      --Big cedar rafters & beams
-      <br />--Cedar wrapped posts
-      <br />--Hidden clear roof over doors provides shelter from the rain
-  -
-    name: Mid-Century Awning
-    display_order: 12
-    category_name: SHELTERS
-    description: |-
-      --Sleek design provides sun break and interest for 50s ranch
-      <br />--Unique tapered supports highlight original style
-      <br />--Project includes matching trellis above garage door
+#  -
+#    name: Lofted Pergola
+#    display_order: 11
+#    category_name: SHELTERS
+#    description: |-
+#      --Big cedar rafters & beams
+#      <br />--Cedar wrapped posts
+#      <br />--Hidden clear roof over doors provides shelter from the rain
+#  -
+#    name: Mid-Century Awning
+#    display_order: 12
+#    category_name: SHELTERS
+#    description: |-
+#      --Sleek design provides sun break and interest for 50s ranch
+#      <br />--Unique tapered supports highlight original style
+#      <br />--Project includes matching trellis above garage door
   -
     name: Cantilevered Entry
     display_order: 13
@@ -307,14 +307,14 @@ Items:
     description: |-
       --Coordinates with larger patio roof
       <br />--All-cedar construction w/ twin-wall poly roofing
-  -
-    name: Backyard Pergola Roof
-    display_order: 17
-    category_name: SHELTERS
-    description: |-
-      --Asymmetrical profile with steeply angled braces
-      <br />--All-cedar construction
-      <br />--Tinted polycarbonate roofing
+#  -
+#    name: Backyard Pergola Roof
+#    display_order: 17
+#    category_name: SHELTERS
+#    description: |-
+#      --Asymmetrical profile with steeply angled braces
+#      <br />--All-cedar construction
+#      <br />--Tinted polycarbonate roofing
   -
     name: Sleek Backyard Shelter
     display_order: 18
@@ -382,15 +382,15 @@ Items:
       <br />--Integrates with stairs from house and basement
       <br />--Includes sleek, floating benches
       <br />--Fully stained
-  -
-    name: Double Front Porch & Pergolas
-    display_order: 5
-    category_name: DECKS
-    description: |-
-      --Substantial pergolas add interest to simple bungalow
-      <br />--Double beam construction includes traditional notched & cut rafters, and clean, integrated railings
-      <br />--Floating deck adds to front living area
-      <br />
+#  -
+#    name: Double Front Porch & Pergolas
+#    display_order: 5
+#    category_name: DECKS
+#    description: |-
+#      --Substantial pergolas add interest to simple bungalow
+#      <br />--Double beam construction includes traditional notched & cut rafters, and clean, integrated railings
+#      <br />--Floating deck adds to front living area
+#      <br />
   -
     name: Broad Deck & Chunky Pergola
     display_order: 6
