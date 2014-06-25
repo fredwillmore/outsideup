@@ -29,6 +29,7 @@ seed_data['Items'].each do |item|
 #  i.display_order = item['display_order']
   i.description = item['description']
   i.category_id = Category.where("name ILIKE ?", item['category_name']).first.id
-  i.photo = File.open("#{Rails.application.secrets.photo_directory}/#{item['name'].gsub(/[^a-zA-Z\s\/-]/m, '').gsub(/[\s\/]+/, '-').downcase}.jpg") rescue nil
+  photo_path = item['updated_photo'] ? "#{Rails.application.secrets.photo_directory}/#{item['updated_photo']}" : "#{Rails.application.secrets.photo_directory}/#{item['name'].gsub(/[^a-zA-Z\s\/-]/m, '').gsub(/[\s\/]+/, '-').downcase}.jpg"
+  i.photo = File.open(photo_path) rescue nil
   i.save
 end

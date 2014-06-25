@@ -7,17 +7,13 @@
           </div>
           <div class="col-xs-4 center">
               <%= link_to( @parent_categories[1].name, "/#{@parent_categories[1].slug}", {class: 'btn btn-primary'}) %>
-              <%= image_tag @parent_categories[1].photo.url(:small), alt: @parent_categories[1].name %>
+              <%= image_tag @parent_categories[1].photo.url(:medium), alt: @parent_categories[1].name %>
+              <%= link_to( "Contact/Order", new_contact_path, {class: 'btn btn-primary'}) %>
           </div>
           <div class="col-xs-4 right">
               <%= link_to( @parent_categories[2].name, "/#{@parent_categories[2].slug}", {class: 'btn btn-primary'}) %>
               <%= image_tag @parent_categories[2].photo.url(:small), alt: @parent_categories[2].name %>
           </div>
-      </div>
-      <div class="row home-row">
-        <div class="col-xs-12">
-          <%= link_to( "Contact/Order", new_contact_path, {class: 'btn btn-primary'}) %>
-        </div>
       </div>
 
 <%= render partial: 'layouts/footer', locals: {page: 'home'} %>

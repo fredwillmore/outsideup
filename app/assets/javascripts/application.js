@@ -17,5 +17,12 @@
 //= require_tree .
 
 $(document).ready(function() {
-    $("a.fancybox").fancybox();
+    $("a.fancybox").fancybox({
+//        padding: 0,
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        }
+    });
 });

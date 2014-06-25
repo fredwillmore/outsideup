@@ -1,10 +1,10 @@
-<div class="col-xs-6 item-column">
+<div class="col-xs-1 item-column">
     <div>
-      <%= link_to image_tag( i.photo.url(:medium), class: "item_image_medium" ), "#item-image-large-#{i.id}", class: "fancybox" %>
+      <%= link_to image_tag( i.photo.url(:medium), class: "item_image_medium" ), "#item-image-large-#{i.id}", class: "fancybox", onclick: "return false;" %>
     </div>
     <div style="display:none;">
         <div id="item-image-large-<%= i.id %>">
-          <%= image_tag( i.photo.url(:large), class: "item-image-large" ) %>
+          <%= image_tag( i.photo.url(:xxlarge), class: "item-image-xxlarge" ) %>
         </div>
     </div>
     <div class="item-name"><%= i.name %></div>

@@ -54,6 +54,7 @@ Items:
     name: Corrugated Panels w/Gate
     display_order: 1
     category_name: FENCES
+    updated_photo: Fence-Stepped-Steel.jpg
     description: |-
       --Steel fence panels climb with the terrain
       <br />--Short front section & gate replaces old fence using existing posts
@@ -61,6 +62,7 @@ Items:
     name: Sloping Mod Fence
     display_order: 2
     category_name: FENCES
+    updated_photo: Fence-Wide-Plank-Slope.jpg
     description: |-
       --Modern fence design follows sloped terrain
       <br />--Wide horizontal boards contrast narrow details
@@ -76,6 +78,7 @@ Items:
     name: Slatted Horizontal Fence
     display_order: 4
     category_name: FENCES
+    updated_photo: Fence-Stepped-Slatted.jpg
     description: |-
       --Open, modern design
       <br />--Height steps up for backyard privacy
@@ -84,6 +87,7 @@ Items:
     name: Solid Slatted Fence and Gates
     display_order: 5
     category_name: FENCES
+    updated_photo: Fence-Gates-Solid-Slatted.jpg
     description: |-
       --Stepped solid cedar fence follows the terrain
       <br />--BIG double gates fit car or truck
@@ -92,6 +96,7 @@ Items:
     name: Trellised Fence w/Recycling Vault
     display_order: 6
     category_name: FENCES
+    updated_photo: Fence-Recycling-Trellis.jpg
     description: |-
       --Cedar posts, rails, trellis and fencing
       <br />--Custom design includes three gates, two sliding doors and double lids above recycling bins
@@ -110,6 +115,7 @@ Items:
     name: Modern Slatted Gates
     display_order: 8
     category_name: FENCES
+    updated_photo: Gates-Tall-Slatted.jpg
     description: |-
       --Matching gates frame updated Ranch
       <br />--Clean horizontal design
@@ -119,6 +125,7 @@ Items:
     name: Open Slatted Fence & Gate
     display_order: 9
     category_name: FENCES
+    updated_photo: Gate-Open-Slats.jpg
     description: |-
       --Sleek horizontal design
       <br />--Converts driveway into patio space
@@ -127,6 +134,7 @@ Items:
     name: Stepped Mesh Fence
     display_order: 10
     category_name: FENCES
+    updated_photo: Fence-Open-Mesh.jpg
     description: |-
       --Sturdy galvanized mesh provides enclosure and support for plants
       <br />--Sleek and strong framing
@@ -135,6 +143,7 @@ Items:
     name: Good Neighbor Trellis & Triangle Entry
     display_order: 11
     category_name: FENCES
+    updated_photo: Gate-Triangle-Entry.jpg
     description: |-
       --Open, minimal fence design
       <br />--Unusual double-beamed entry arch
@@ -143,6 +152,7 @@ Items:
     name: Sleek Privacy Panels
     display_order: 12
     category_name: FENCES
+    updated_photo: Screens-Mod-Slats.jpg
     description: |-
       --Project includes 3 stand-alone screens
       <br />--Beautiful cedar face
@@ -173,6 +183,7 @@ Items:
     name: Privacy Gate
     display_order: 16
     category_name: FENCES
+    updated_photo: Gates-Tonia-Ian.jpg
     description: |-
       --Custom horizontal design
       <br />--Wide 4\' gate w/4x6 posts
@@ -181,6 +192,7 @@ Items:
     name: Huge Patio Roof
     display_order: 1
     category_name: SHELTERS
+    updated_photo: Big-Patio-Roof-Cedar.jpg
     description: |-
       --Built with chunky 6x6 posts and double beams
       <br />--All-cedar construction
@@ -190,6 +202,7 @@ Items:
     name: Right Angle Roof
     display_order: 2
     category_name: SHELTERS
+    updated_photo: Roof-Big-L.jpg
     description: |-
       --Stand-alone roof surrounds stone patio
       <br />--Tinted, UV-blocking Poly roofing
@@ -214,6 +227,7 @@ Items:
     name: Peaked Entry Trellis
     display_order: 5
     category_name: SHELTERS
+    updated_photo: Trellis-Peaked-Entry.jpg
     description: |-
       --Mirrors classic Hawthorne house
       <br />--Thick rafters with an open roof
@@ -222,6 +236,7 @@ Items:
     name: Chunky Pergola
     display_order: 6
     category_name: SHELTERS
+    updated_photo: Pergola-Deck-Front.jpg
     description: |-
       --Fat 6x6 cedar posts
       <br />--All-cedar beams and rafters
@@ -240,6 +255,7 @@ Items:
     name: Pergola Patio Roof
     display_order: 8
     category_name: SHELTERS
+    updated_photo: Roof-Pergola.jpg
     description: |-
       --Notched and custom cut rafters
       <br />--Tinted Polycarbonate roofing
@@ -248,6 +264,7 @@ Items:
     name: Retro Entryway
     display_order: 9
     category_name: SHELTERS
+    updated_photo: Roof-Mod-Addition-2.jpg
     description: |-
       --Entry structure solves issues with a low roof line while integrating with the house.
       <br />--Mid-century design includes cantilevered beams, long-fingered rafters and steep supports.
@@ -255,6 +272,7 @@ Items:
     name: Mod Roof Addition
     display_order: 10
     category_name: SHELTERS
+    updated_photo: Roof-Mod-Refit.jpg
     description: |-
       --Clear roof panels, long rafters and 2x6 beams add shelter to existing trellis.
       <br />--Designed to compliment original structure.
@@ -279,6 +297,7 @@ Items:
     name: Cantilevered Entry
     display_order: 13
     category_name: SHELTERS
+    updated_photo: Roof-Cantilever-Entry.jpg
     description: |-
       --Mid-century inspired design includes slanted posts
       <br />--All-cedar construction
@@ -304,6 +323,7 @@ Items:
     name: Cantilevered Side Roof
     display_order: 16
     category_name: SHELTERS
+    updated_photo: Roof-Elbowed-Entry.jpg
     description: |-
       --Coordinates with larger patio roof
       <br />--All-cedar construction w/ twin-wall poly roofing
@@ -319,6 +339,7 @@ Items:
     name: Sleek Backyard Shelter
     display_order: 18
     category_name: SHELTERS
+    updated_photo: Shelter-Sleek-Backyard.jpg
     description: |-
       --Wide roof built over existing deck
       <br />--Cedar Beams and Rafters
@@ -342,6 +363,7 @@ Items:
     name: Balcony Roof
     display_order: 21
     category_name: SHELTERS
+    updated_photo: Roof-Balcony.jpg
     description: |-
       --Clean post & beam structure protects upper deck
       <br />--Integrates with existing deck design
@@ -351,6 +373,7 @@ Items:
     name: Cascading Deck
     display_order: 1
     category_name: DECKS
+    updated_photo: Deck-Cascading-Stairs.jpg
     description: |-
       --All-cedar surfaces,
       <br />--Sleek, floating benches
@@ -359,6 +382,7 @@ Items:
     name: Tigerwood Deck
     display_order: 2
     category_name: DECKS
+    updated_photo: Deck-Tiger-Bench.jpg
     description: |-
       --Extra-burly construction
       <br />--Integrated full-length bench
@@ -369,6 +393,7 @@ Items:
     name: Wraparound Deck
     display_order: 3
     category_name: DECKS
+    updated_photo: Deck-Wraparound-Comp.jpg
     description: |-
       --Broad 30-foot deck has sunken level for the hot tub
       <br />--Composite decking and steps
@@ -377,6 +402,7 @@ Items:
     name: Low Deck with Floating Benches
     display_order: 4
     category_name: DECKS
+    updated_photo: Deck-Low-Sleek-Benches.jpg
     description: |-
       --Entire deck sits one step above grade
       <br />--Integrates with stairs from house and basement
@@ -395,6 +421,7 @@ Items:
     name: Broad Deck & Chunky Pergola
     display_order: 6
     category_name: DECKS
+    updated_photo: Pergola-Posts-Deck.jpg
     description: |-
       --Big, cozy deck extends living area
       <br />--Fat 6x6 cedar posts with thick rafters
@@ -410,6 +437,7 @@ Items:
     name: Warm Cedar Shed
     display_order: 1
     category_name: Modern Sheds
+    updated_photo: Shed-Warm-Cedar.jpg
     description: |-
       --All-cedar shingles, rafters and trim
       <br />--Custom-built doors
@@ -421,6 +449,7 @@ Items:
     name: Steel Bike House
     display_order: 2
     category_name: Modern Sheds
+    updated_photo: Shed-Bike-Cantilever.jpg
     description: |-
       --Wide sliding door
       <br />--Multiple reclaimed windows
@@ -430,6 +459,7 @@ Items:
     name: Steel & Cedar Garage
     display_order: 3
     category_name: Modern Sheds
+    updated_photo: Shed-Steel-Cedar.jpg
     description: |-
       --Post and beam design
       <br />--Custom cedar doors and rafters
@@ -439,6 +469,7 @@ Items:
     name: Steel Yardhouse
     display_order: 4
     category_name: Modern Sheds
+    updated_photo: Shed-Steel-Yardhouse.jpg
     description: |-
       --Corrugated steel roof, door and walls
       <br />--Covered side porch to store firewood
@@ -456,6 +487,7 @@ Items:
     name: Steel Slider
     display_order: 6
     category_name: Modern Sheds
+    updated_photo: Shed-Steel-Slider.jpg
     description: |-
       --Satin-finished steel skin
       <br />--Cedar rafters & beams
@@ -464,6 +496,7 @@ Items:
     name: Long Cedar Shed
     display_order: 7
     category_name: Modern Sheds
+    updated_photo: Shed-Sid-Cedar.jpg
     description: |-
       --12 foot x 7 foot building fits small contained space
       <br />--Details include classic window, hand-made doors and boxed roof
@@ -472,6 +505,7 @@ Items:
     name: Long Border Shed
     display_order: 8
     category_name: Modern Sheds
+    updated_photo: Shed-Long-Border-Slider.jpg
     description: |-
       --6-feet deep x 14-foot long for bikes & garden tools
       <br />--Integrates with a new fence on the property line
@@ -480,6 +514,7 @@ Items:
     name: Combo Slider Shed
     display_order: 9
     category_name: Modern Sheds
+    updated_photo: Shed-Combo-Slider.jpg
     description: |-
       --Combines traditional wood siding and corrugated steel
       <br />--Wide sliding door provides easy access
@@ -497,6 +532,7 @@ Items:
     name: Contemporary Cube
     display_order: 11
     category_name: Modern Sheds
+    updated_photo: Shed-Contemporary-Cube.jpg
     description: |-
       --Modern geometric design
       <br />--Incorporates salvaged door, recovered window and reclaimed siding

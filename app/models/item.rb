@@ -10,7 +10,7 @@ class Item < ActiveRecord::Base
 
   attr_accessor :order_field, :parent_id
 
-  has_attached_file :photo, styles: { small: "200", medium: "300", large: "400" }, default_url: "/images/:style/missing.png"
+  has_attached_file :photo, styles: { small: "200", medium: "300", large: "400", xlarge: "500", xxlarge: "600" }, default_url: "/images/:style/missing.png"
   #validates :photo, :attachment_presence => true
   validates_with AttachmentContentTypeValidator, attributes: :photo, content_type: ['image/jpeg', 'image/jpg', 'image/png']
 
