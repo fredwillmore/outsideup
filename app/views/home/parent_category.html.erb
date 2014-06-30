@@ -10,8 +10,9 @@
             </div>
             <% c.items.each_slice(2) do |slice| %>
             <div class="row">
-                <%= render partial: 'home/item', locals: {i: slice[0], offset: 1, side: 'left'} %>
-                <%= render partial: 'home/item', locals: {i: slice[1], offset: 0, side: 'right'} unless slice[1].nil? %>
+              <% slice.each do |item| %>
+                <%= render partial: 'home/item', locals: {i: item, offset: 0} %>
+              <% end %>
             </div>
             <% end %>
         <% end %>

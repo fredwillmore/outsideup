@@ -8,8 +8,8 @@
 body {
   font-family: arial, verdana, helvetica;
 //  background-image: image-url('bg.gif');
-//  background-position: 50% 50%;
-  background-repeat: repeat-y;
+////  background-position: 50% 50%;
+//  background-repeat: repeat-y;
 //  background-color: #21813F;
   margin-left: 0;
   margin-right: 0;
@@ -27,22 +27,31 @@ $yellow: #EDE210;
 
 .bg-color {
   height: 100%;
-  min-width: 5px;
+  min-width: 5%;
 //  max-width: 500px;
 }
-#bg-color-left {
-  @extend .bg-color;
-  background-color: $blue;
-//  height: 100%;
+
+#main-td {
+  padding: 5px;
 }
-#bg-color-right {
-  @extend .bg-color;
-  background-color: $green;
-//  height: 100%;
+
+@media (min-width: 600px) {
+  #main-td {
+    padding: 20px;
+    width: 660px;
+  }
+  #bg-color-left {
+    @extend .bg-color;
+    background-color: $blue;
+  }
+  #bg-color-right {
+    @extend .bg-color;
+    background-color: $green;
+  }
 }
 
 .item-column{
-  width: 320px
+  width: 320px;
 }
 
 .item-name {

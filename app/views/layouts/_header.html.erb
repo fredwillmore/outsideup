@@ -12,7 +12,8 @@
   <title>Outside Up - Fresh Interactive Design</title>
 </head>
 
-<body style="background-image: url(<%= image_url 'bg.gif' %>);">
+<body>
+    <header>
     <div class="red header-img-container">
         <% if page=='home' || page=='contact' %>
             <%= page=='contact' ? link_to( image_tag( "outsideup.png", alt: "OutsideUp - Custom Contemporary Structures", class: "header-img-lg img-responsive" ), root_path ) :  image_tag( "outsideup.png", alt: "OutsideUp - Fresh Interactive Design", class: "header-img-lg img-responsive") %>
@@ -21,9 +22,10 @@
             <%= link_to( "Contact/Order", new_contact_path, {class: 'btn btn-primary button-contact-pc'}) %>
         <% end %>
     </div>
-    <div class="container">
-      <% unless params['hide-bg-color'] %>
-          <div class="row main-row">
-              <div class="col-xs-1 bg-color" id="bg-color-left"></div>
-              <div class="col-xs-10" style="text-align: center; background-color: #ffffff; <%= page=='home' || page=='contact' ? "height: 100%;" : "" %> max-width: <%= page=='home' ? 760 : 660 %>px;"><!-- this is a cheesy hack to get the width but I'm tired of pushing pixels around :D fw -->
-      <% end %>
+    </header>
+    <main>
+      <table style="width: 100%">
+        <tr>
+          <td class="bg-color" id="bg-color-left">&nbsp;</td>
+          <td id="main-td">
+            <div class="container">
