@@ -20,10 +20,16 @@ body, html, .container, .main-row {
   padding: 0;
   margin: 0;
 }
+
 $blue:   #2F78BD;
 $red:    #A21D21;
 $green:	 #21813F;
 $yellow: #EDE210;
+
+.red			{ background-color: $red; }
+.green			{ background-color: $green; }
+.blue			{ background-color: $blue; }
+.yellow			{ background-color: $yellow; }
 
 .bg-color {
   height: 100%;
@@ -109,6 +115,7 @@ $yellow: #EDE210;
     }
     &:hover {
       color: $red;
+      text-decoration: underline;
     }
   }
 }
@@ -183,4 +190,15 @@ label {
 .contact-wrapper {
   width: 220px;
   margin-bottom: 15px;
+}
+
+a {
+  color: $red;
+  &:visited {
+    color: $red;
+  }
+  &:hover {
+    color: $red;
+    text-decoration: underline;
+  }
 }
