@@ -7,8 +7,7 @@
 </div>
 
 <div class="row">
-  <div class="col-xs-10 col-xs-offset-1">
-
+  <div class="col-xs-5 col-xs-offset-1">
 <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
     <%= f.input :name, :required => true, wrapper_html: { class: 'contact-wrapper' }, input_html: { class: 'contact-input' } %>
     <%= f.input :email, :required => true, wrapper_html: { class: 'contact-wrapper' }, input_html: { class: 'contact-input' } %>
@@ -20,6 +19,12 @@
         <%=f.button :submit, 'Send message', :class=> "btn btn-primary" %>
     </div>
 <% end %>
+  </div>
+  <div class="col-xs-5">
+    <strong><i>OutsideUp</i></strong> is located in Portland, OR.<br>
+    All structures are Custom-built on-site to fit your style and your needs.
+    For prices and information, send a message, or contact owner Michael Olfert at: <strong><a href="tel:+15034814484" class="phone" onclick="/* if(true){ return false; } */">503.481.4484</a></strong>.<br>
+    Thanks.
   </div>
 </div>
 
