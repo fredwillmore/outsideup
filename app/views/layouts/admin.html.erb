@@ -12,6 +12,7 @@
       <h1><a href="/">OutsideUp Admin Area</a></h1>
       <div id="user-navigation">
         <ul class="wat-cf">
+          <li><%= link_to t("web-app-theme.profile", :default => "Home"), admin_home_path(1) %></li>
           <li><%= link_to t("web-app-theme.profile", :default => "Items"), admin_items_path %></li>
           <li><%= link_to t("web-app-theme.profile", :default => "Categories"), admin_categories_path %></li>
           <li><%= link_to t("web-app-theme.profile", :default => "Parent Categories"), admin_parent_categories_path %></li>

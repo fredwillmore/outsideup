@@ -2,6 +2,9 @@ Outsideup::Application.routes.draw do
 
   namespace :admin do
     root to: "home#index"
+
+    resources :home
+
     resources :items do
       member do
         get :move_up

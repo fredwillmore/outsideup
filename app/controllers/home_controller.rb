@@ -2,6 +2,7 @@ class HomeController < ApplicationController
   before_action :set_parent_categories, only: [:index, :parent_category]
 
   def index
+    @home ||= Home.find(1)
   end
 
   def parent_category
@@ -14,6 +15,9 @@ class HomeController < ApplicationController
 
   def company_profile
     redirect_to "/admin/companies/#{current_user.company_id}#{ can?(:update, Company, :id, current_user.company_id) ? '/edit' : '' }"
+  end
+
+  def home
   end
 
   private

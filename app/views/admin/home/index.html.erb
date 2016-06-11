@@ -1,3 +1,16 @@
-<p><%= link_to 'Parent Categories', admin_parent_categories_path %></p>
-<p><%= link_to 'Categories', admin_categories_path %></p>
-<p><%= link_to 'Items', admin_items_path %></p>
+<h1>Edit Contact Info</h1>
+<%= form_for @home, url: admin_home_path(@home) do |f| %>
+    <div class="field">
+      <%= f.label :content %><br>
+      <%= f.text_area :content, rows: 8, style: "width: 400px" %>
+    </div>
+    <div class="field">
+      <%= f.label :phone %><br>
+      <%= f.text_field :phone %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Update' %>
+    </div>
+
+<% end %>
+

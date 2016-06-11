@@ -2,6 +2,7 @@ class ContactsController < ApplicationController
   before_action :set_parent_categories
   def new
     @contact = Contact.new
+    @home = Home.find 1
   end
 
   def create
