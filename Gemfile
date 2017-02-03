@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4'
+gem 'rails', '4.1.0'
 
 # production environment has this version of rake
 # gem 'rake', '0.9.2.2'
