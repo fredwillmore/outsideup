@@ -13,12 +13,10 @@
 //= require jquery
 //= require fancybox
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 $(document).ready(function() {
     $("a.fancybox").fancybox({
-//        padding: 0,
         helpers: {
             overlay: {
                 locked: false
