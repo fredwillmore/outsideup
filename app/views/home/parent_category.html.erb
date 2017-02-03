@@ -1,7 +1,7 @@
 <%= render partial: 'layouts/header', locals: {page: 'parent_category', page_name: @parent_category.name} %>
 <%= render partial: 'layouts/links', locals: {page: 'parent_category', id: @parent_category.slug} %>
 
-        <% @parent_category.categories.each do |c| %>
+      <% @parent_category.categories.each do |c| %>
         <% if c.items.count>0 %>
             <div class="row">
                 <div class="col-xs-12" >
