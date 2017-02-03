@@ -1,31 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8" >
-  <meta name="DESCRIPTION" content="Indoor and outdoor furniture, planters, decks, platforms and structures">
-  <meta name="KEYWORDS" content="furniture, planters, decks, platforms, structures, recovered materials, recycled">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="Shortcut Icon" href="./favicon.ico">
-  <%
-#  <title>Outside Up - < %= params['pcatname'].empty? ? "Fresh Interactive Design" : params['pcatname'] % ></title>
-  %>
-  <title>Outside Up - Fresh Interactive Design</title>
-</head>
-
-<body>
-    <header>
-    <div class="red header-img-container">
-        <% if page=='home' || page=='contact' %>
-            <%= page=='contact' ? link_to( image_tag( "outsideup.png", alt: "OutsideUp - Custom Contemporary Structures", class: "header-img-lg img-responsive" ), root_path ) :  image_tag( "outsideup.png", alt: "OutsideUp - Fresh Interactive Design", class: "header-img-lg img-responsive") %>
-        <% else %>
-            <%= link_to( image_tag( "outsideup_lg.png", alt: "OutsideUp - Custom Contemporary Structures", size: "320x125" ), root_path ) %>
-            <%= link_to( "Contact/Order", new_contact_path, {class: 'btn btn-primary button-contact-pc'}) %>
-        <% end %>
-    </div>
-    </header>
-    <main style="width: 100%;   height: 100%;">
-      <table style="width: 100%; height: 100%;">
-        <tr>
-          <td class="bg-color" id="bg-color-left">&nbsp;</td>
-          <td id="main-td" style="width: <%= page=='home' ? 770 : 660 %>px;">
-            <div class="container">
+<header>
+  <div class="red header-img-container">
+      <% if page=='home' || page=='contact' %>
+          <%= page=='contact' ? link_to( image_tag( "outsideup.png", alt: "OutsideUp - Custom Contemporary Structures", class: "header-img-lg img-responsive" ), root_path ) :  image_tag( "outsideup.png", alt: "OutsideUp - Fresh Interactive Design", class: "header-img-lg img-responsive") %>
+      <% else %>
+          <%= link_to( image_tag( "outsideup_lg.png", alt: "OutsideUp - Custom Contemporary Structures", size: "320x125" ), root_path ) %>
+          <%= link_to( "Contact/Order", new_contact_path, {class: 'btn btn-primary button-contact-pc'}) %>
+      <% end %>
+  </div>
+</header>
+<main style="width: 100%;   height: 100%;">
+  <table style="width: 100%; height: 100%;">
+    <tr>
+      <td class="bg-color" id="bg-color-left">&nbsp;</td>
+      <td id="main-td" style="width: <%= page=='home' ? 770 : 660 %>px;">
+        <div class="container">
