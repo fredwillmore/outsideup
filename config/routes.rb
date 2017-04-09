@@ -30,9 +30,14 @@ Outsideup::Application.routes.draw do
 
   root to: "home#index"
 
+  resources "contacts", only: [:index, :new, :create] do
+    collection do
+      get :mailto
+    end
+  end
+
   get '/:id' => 'home#parent_category'
 
-  resources "contacts", only: [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

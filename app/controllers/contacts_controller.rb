@@ -1,5 +1,10 @@
 class ContactsController < ApplicationController
   before_action :set_parent_categories
+
+  def index
+    @home = Home.find 1
+  end
+
   def new
     @contact = Contact.new
     @home = Home.find 1
@@ -15,6 +20,13 @@ class ContactsController < ApplicationController
       flash.now[:error] = 'Cannot send message.'
       render :new
     end
+  end
+
+  def mailto
+    respond_to do |format|
+      format.js
+    end
+
   end
 
   private

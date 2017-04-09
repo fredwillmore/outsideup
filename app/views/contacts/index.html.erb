@@ -1,0 +1,29 @@
+<%= render partial: 'layouts/header', locals: {page: 'contact'} %>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2 class="page-name">Contact</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-5 col-xs-offset-1">
+    <%= link_to button_tag('Email Us', class: "btn btn-primary", id: 'email_me_button'), new_contact_path %>
+  </div>
+  <div class="col-xs-5">
+    <%= @home.display_content %>
+  </div>
+</div>
+
+<script>
+  $("#email_me_button").click(function(e){
+    e.preventDefault();
+    var target = e.target.closest('a').href;
+    $.get("<%= mailto_contacts_path format: :js %>", '')
+      .fail(function(){
+        window.location.href = target;
+      });
+  });
+</script>
+
+<%= render partial: 'layouts/footer', locals: {page: 'contact'} %>
