@@ -46,6 +46,9 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
+# Use debugger
+gem 'byebug', group: [:development, :test]
+
 gem 'thin', group: :development
 gem 'better_errors', '1.1.0', group: :development
 gem 'autoprefixer-rails', '5.0.0.1'
@@ -71,5 +74,4 @@ gem 'rspec-rails', group: :test
 
 group :development do
   gem 'spring'
-  gem 'pry-byebug'
 end
