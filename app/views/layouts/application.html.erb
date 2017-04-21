@@ -9,7 +9,9 @@
   <title>Outside Up - Fresh Interactive Design</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag 'https://www.google.com/recaptcha/api.js' %>
+  <%=
+    # javascript_include_tag 'https://www.google.com/recaptcha/api.js' 
+  %>
   <%= csrf_meta_tags %>
 </head>
 
