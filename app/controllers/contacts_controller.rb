@@ -24,13 +24,25 @@ class ContactsController < ApplicationController
 
   def mailto
     respond_to do |format|
-      format.js
+      format.js do
+        spam_redirect unless verify_google_recaptcha
+      end
     end
+  end
 
+  def spam_redirect
+    redirect_to new_contact_path
   end
 
   private
   def set_parent_categories
     @parent_categories = ParentCategory.all
+  end
+
+  def verify_google_recaptcha
+    # this should use delayed_job or something but I'm currently more interested in getting_the_job_done
+    status = `curl "https://www.google.com/recaptcha/api/siteverify?secret=#{Rails.application.secrets.recaptcha_secret_key}&response=#{params[:response]}"`
+    hash = JSON.parse(status)
+    hash["success"] == true ? true : false
   end
 end
