@@ -7,7 +7,7 @@ gem 'rails', '4.1.0'
 # gem 'rake', '0.9.2.2'
 
 # Use postgres as the database for Active Record
-gem 'pg'
+gem 'pg', '0.17.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -46,11 +46,9 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
 gem 'thin', group: :development
-gem 'better_errors', group: :development
+gem 'better_errors', '1.1.0', group: :development
+gem 'autoprefixer-rails', '5.0.0.1'
 
 #gem "paperclip", "~> 4.1"
 #gem 'paperclip', github: 'thoughtbot/paperclip'

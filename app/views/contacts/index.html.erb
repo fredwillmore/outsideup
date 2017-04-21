@@ -1,0 +1,28 @@
+<%= render partial: 'layouts/header', locals: {page: 'contact'} %>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2 class="page-name">Contact</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-5 col-xs-offset-1">
+    <%= link_to button_tag('Email Us', class: "btn btn-primary g-recaptcha", data: { sitekey: Rails.application.secrets.recaptcha_public_key, callback: "getEmailAddress" }), new_contact_path %>
+    <%= link_to "default@example.com", "mailto:default@example.com", style: "display: none;", id: "mail_link" %>
+  </div>
+  <div class="col-xs-5">
+    <%= @home.display_content %>
+  </div>
+</div>
+
+<script>
+  var getEmailAddress = function(response){
+    $.get('<%= mailto_contacts_path format: :js %>', {response: response})
+      .fail(function(){
+        window.location.href = '<%= new_contact_path %>';
+      });
+  };
+</script>
+
+<%= render partial: 'layouts/footer', locals: {page: 'contact'} %>
