@@ -47,7 +47,7 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'byebug', group: [:development, :test]
 
 gem 'thin', group: :development
 gem 'better_errors', '1.1.0', group: :development
