@@ -12,7 +12,8 @@
       # link_to button_tag('Email Us', class: "btn btn-primary g-recaptcha", data: { sitekey: Rails.application.secrets.recaptcha_public_key, callback: "getEmailAddress" }), new_contact_path
     %>
     <%= link_to button_tag('Email Us', class: "btn btn-primary mail-link"), new_contact_path %>
-    <%= link_to "default@example.com", "mailto:default@example.com", style: "color: white;", id: "mail_link" %>
+    <%= image_tag 'squares.svg', class: 'loading', style: 'padding: 30px 85px 30px 85px; display: none' %>
+    <%= link_to button_tag("default@example.com", class: "btn btn-primary mail-to"), "mailto:default@example.com", style: "display: none" %>
   </div>
   <div class="col-xs-5">
     <%= @home.display_content %>
@@ -22,13 +23,17 @@
 <script>
   var getEmailAddress = function(e){
     e.preventDefault();
+    $('.mail-link').hide();
+    $('.loading').show();
     setTimeout(
       function(){
         $.get('<%= mailto_contacts_path format: :js %>')
           .fail(function(){
+            $('.mail-link').show();
+            $('.loading').hide();
             window.location.href = '<%= new_contact_path %>';
           });
-      }, 1000
+      }, 500
     );
   };
 

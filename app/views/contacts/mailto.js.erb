@@ -1,5 +1,18 @@
-$('#mail_link').attr('href', 'mailto:Michael.Olfert@gmail.com?subject=Email From OutsideUp Website')
+$('.mail-to')
   .html('Michael.Olfert@gmail.com')
-  .show()
-  .css('color', '');
-$('#mail_link')[0].click();
+  .parent()
+  .attr('href', 'mailto:Michael.Olfert@gmail.com?subject=Email From OutsideUp Website');
+
+// Safari displays a Big Scary Message saying "this site has been blocked from composing an email"
+// so only automatically click the link for non-safari users
+if(!(navigator.vendor.indexOf("Apple")==0 && /\sSafari\//.test(navigator.userAgent))){
+  $('.mail-to')[0].click();
+}
+
+// if click-through doesn't work after a couple seconds, just show the link
+setTimeout(
+  function(){
+    $('.loading').hide();
+    $('.mail-to').parent().show();
+  }, 2000
+);
